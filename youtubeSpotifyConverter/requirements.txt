@@ -1,3 +1,0 @@
-requests
-base64
-urllib
