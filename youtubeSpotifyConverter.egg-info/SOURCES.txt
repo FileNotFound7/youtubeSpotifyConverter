@@ -1,0 +1,9 @@
+README.md
+setup.py
+youtubeSpotifyConverter/__init__.py
+youtubeSpotifyConverter/youtubeSpotifyConverter.py
+youtubeSpotifyConverter.egg-info/PKG-INFO
+youtubeSpotifyConverter.egg-info/SOURCES.txt
+youtubeSpotifyConverter.egg-info/dependency_links.txt
+youtubeSpotifyConverter.egg-info/requires.txt
+youtubeSpotifyConverter.egg-info/top_level.txt

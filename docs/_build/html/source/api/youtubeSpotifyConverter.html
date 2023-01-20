@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&lt;no title&gt; &mdash; youtubeSpotifyConverter 0.1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Welcome to youtubeSpotifyConverter’s documentation!" href="../../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> youtubeSpotifyConverter
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Python API:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">youtubeSpotifyConverter</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.C_fromLink"><code class="docutils literal notranslate"><span class="pre">youtubeSpotifyConverter.C_fromLink()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.C_fromTitle"><code class="docutils literal notranslate"><span class="pre">youtubeSpotifyConverter.C_fromTitle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.SP_get"><code class="docutils literal notranslate"><span class="pre">youtubeSpotifyConverter.SP_get()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.SP_search"><code class="docutils literal notranslate"><span class="pre">youtubeSpotifyConverter.SP_search()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.YT_getChannel"><code class="docutils literal notranslate"><span class="pre">youtubeSpotifyConverter.YT_getChannel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.YT_getVideo"><code class="docutils literal notranslate"><span class="pre">youtubeSpotifyConverter.YT_getVideo()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.YT_idIntoURL"><code class="docutils literal notranslate"><span class="pre">youtubeSpotifyConverter.YT_idIntoURL()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.YT_intoMusic"><code class="docutils literal notranslate"><span class="pre">youtubeSpotifyConverter.YT_intoMusic()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.YT_search"><code class="docutils literal notranslate"><span class="pre">youtubeSpotifyConverter.YT_search()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">youtubeSpotifyConverter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">&lt;no title&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/api/youtubeSpotifyConverter.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <dl class="py class">
+<dt class="sig sig-object py" id="youtubeSpotifyConverter.youtubeSpotifyConverter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">youtubeSpotifyConverter.</span></span><span class="sig-name descname"><span class="pre">youtubeSpotifyConverter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">YT_API_KEY</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SP_CLIENT_ID</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SP_CLIENT_SECRET</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/youtubeSpotifyConverter/youtubeSpotifyConverter.html#youtubeSpotifyConverter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#youtubeSpotifyConverter.youtubeSpotifyConverter" title="Permalink to this definition"></a></dt>
+<dd><p>A module that converts spotify URLs to youtube and vice versa.
+There is the ability to output a youtube music URL but it is not 100% reliable as links may not work properly so it is not recommended to use that function.</p>
+<p>The API keys are passed in on instantiation.
+You can get the keys at:</p>
+<blockquote>
+<div><p>Youtube: <a class="reference external" href="https://console.cloud.google.com/apis/credentials">https://console.cloud.google.com/apis/credentials</a>
+Spotify: <a class="reference external" href="https://developer.spotify.com/dashboard/applications">https://developer.spotify.com/dashboard/applications</a></p>
+</div></blockquote>
+<p>Methods and variables that relate to youtube have <a href="#id1"><span class="problematic" id="id2">YT_</span></a> before the name
+Methods and variables that relate to spotify have <a href="#id3"><span class="problematic" id="id4">SP_</span></a> before the name
+Methods that make up the link converter have <a href="#id5"><span class="problematic" id="id6">C_</span></a> before the name</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="youtubeSpotifyConverter.youtubeSpotifyConverter.C_fromLink">
+<span class="sig-name descname"><span class="pre">C_fromLink</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/youtubeSpotifyConverter/youtubeSpotifyConverter.html#youtubeSpotifyConverter.C_fromLink"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.C_fromLink" title="Permalink to this definition"></a></dt>
+<dd><p>takes in a link to either youtube/youtube music or spotify and returns a links to the same content in other services.
+services names: youtube, youtubeMusic, spotify</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>link</strong> (<em>str</em>) – The link you want to convert</p></li>
+<li><p><strong>music</strong> (<em>bool</em>) – Whether or not to also include a youtube music link</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary of key-value pairs where the key is the service name and value is the URL that should match the name. Also has a pair called name containing the song and it’s artist’s name</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="youtubeSpotifyConverter.youtubeSpotifyConverter.C_fromTitle">
+<span class="sig-name descname"><span class="pre">C_fromTitle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/youtubeSpotifyConverter/youtubeSpotifyConverter.html#youtubeSpotifyConverter.C_fromTitle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.C_fromTitle" title="Permalink to this definition"></a></dt>
+<dd><p>takes in a song name and returns links to youtube, youtube music, and spotify that should match
+services names: youtube, youtubeMusic, spotify</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the song (you can get more accurate searches with artist in the name) that you want links to</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary of key-value pairs where the key is the service name and value is the URL that should match the name</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="youtubeSpotifyConverter.youtubeSpotifyConverter.SP_get">
+<span class="sig-name descname"><span class="pre">SP_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/youtubeSpotifyConverter/youtubeSpotifyConverter.html#youtubeSpotifyConverter.SP_get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.SP_get" title="Permalink to this definition"></a></dt>
+<dd><p>gets a spotify song from an Id and returns info about it in json form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The song that you want to find’s id.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Json data about the channel specified in the id</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>json</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="youtubeSpotifyConverter.youtubeSpotifyConverter.SP_search">
+<span class="sig-name descname"><span class="pre">SP_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/youtubeSpotifyConverter/youtubeSpotifyConverter.html#youtubeSpotifyConverter.SP_search"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.SP_search" title="Permalink to this definition"></a></dt>
+<dd><p>gets the first song from a spotify search and returns info about it in json form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>keyword</strong> (<em>str</em>) – The string to search for.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="youtubeSpotifyConverter.youtubeSpotifyConverter.YT_getChannel">
+<span class="sig-name descname"><span class="pre">YT_getChannel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/youtubeSpotifyConverter/youtubeSpotifyConverter.html#youtubeSpotifyConverter.YT_getChannel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.YT_getChannel" title="Permalink to this definition"></a></dt>
+<dd><p>gets a youtube channel from an Id and returns info about it in json form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The channel that you want to find’s id.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Json data about the channel specified in the id</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="youtubeSpotifyConverter.youtubeSpotifyConverter.YT_getVideo">
+<span class="sig-name descname"><span class="pre">YT_getVideo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/youtubeSpotifyConverter/youtubeSpotifyConverter.html#youtubeSpotifyConverter.YT_getVideo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.YT_getVideo" title="Permalink to this definition"></a></dt>
+<dd><p>gets a youtube video from an Id and returns info about it in json form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The video that you want to find’s id.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Json data about the video specified in the id</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="youtubeSpotifyConverter.youtubeSpotifyConverter.YT_idIntoURL">
+<span class="sig-name descname"><span class="pre">YT_idIntoURL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/youtubeSpotifyConverter/youtubeSpotifyConverter.html#youtubeSpotifyConverter.YT_idIntoURL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.YT_idIntoURL" title="Permalink to this definition"></a></dt>
+<dd><p>turns a youtube Id into a URL</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The Id that you want a URL for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A youtube URL</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="youtubeSpotifyConverter.youtubeSpotifyConverter.YT_intoMusic">
+<span class="sig-name descname"><span class="pre">YT_intoMusic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">URL</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/youtubeSpotifyConverter/youtubeSpotifyConverter.html#youtubeSpotifyConverter.YT_intoMusic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.YT_intoMusic" title="Permalink to this definition"></a></dt>
+<dd><p>turns a youtube URL into a youtube music URL. Note: this will not always work, and will not work on URLs to anything that isn’t music</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>URL</strong> (<em>str</em>) – The youtube URL that will be changed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A youtube music URL</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="youtubeSpotifyConverter.youtubeSpotifyConverter.YT_search">
+<span class="sig-name descname"><span class="pre">YT_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/youtubeSpotifyConverter/youtubeSpotifyConverter.html#youtubeSpotifyConverter.YT_search"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#youtubeSpotifyConverter.youtubeSpotifyConverter.YT_search" title="Permalink to this definition"></a></dt>
+<dd><p>gets the first song from a youtube search and returns info about it in json form</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>keyword</strong> (<em>str</em>) – The keyword to search for.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Json data about the video found by the search</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../index.html" class="btn btn-neutral float-left" title="Welcome to youtubeSpotifyConverter’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, FileNotFound7.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
