@@ -3,20 +3,6 @@ from base64 import b64encode
 from urllib.parse import urlparse, parse_qs
 
 class youtubeSpotifyConverter:
-    """
-    A module that converts spotify URLs to youtube and vice versa.
-    There is the ability to output a youtube music URL but it is not 100% reliable as links may not work properly so it is not recommended to use that function.
-
-    The API keys are passed in on instantiation.
-    You can get the keys at:
-        Youtube: https://console.cloud.google.com/apis/credentials
-        Spotify: https://developer.spotify.com/dashboard/applications
-
-    Methods and variables that relate to youtube have YT_ before the name
-    Methods and variables that relate to spotify have SP_ before the name
-    Methods that make up the link converter have C_ before the name
-    """
-
     # the URLs used to make requests
     SP_URL = "https://api.spotify.com/v1/"
     YT_URL = "https://youtube.googleapis.com/youtube/v3/"

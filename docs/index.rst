@@ -12,6 +12,12 @@ Welcome to youtubeSpotifyConverter's documentation!
 
 .. toctree::
    :maxdepth: 2
+   :caption: Getting Started:
+
+   source/gettingStarted
+
+.. toctree::
+   :maxdepth: 2
    :caption: Python API:
 
    source/api/youtubeSpotifyConverter
