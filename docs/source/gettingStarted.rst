@@ -31,6 +31,11 @@ You can get the keys at:
 * Youtube: https://console.cloud.google.com/apis/credentials
 * Spotify: https://developer.spotify.com/dashboard/applications
 
+**GitHub and PyPI pages**
+
+* GitHub: https://github.com/FileNotFound7/youtubeSpotifyConverter
+* PyPI: https://pypi.org/project/youtubeSpotifyConverter/
+
 **Method naming**
 
 Methods and variables that relate to youtube have YT\_ before the name
