@@ -193,10 +193,12 @@ poetry.toml
 
 /docs/_build
 
-/youtubeSpotifyConverter/__pycache__
-
 /youtubeSpotifyConverter.egg-info
 
 /build
 
 /dist
+
+/youtubeSpotifyConverter/__pycache__
+/youtubeSpotifyConverter/__pycache__/__init__.cpython-311.pyc
+/youtubeSpotifyConverter/__pycache__/youtubeSpotifyConverter.cpython-311.pyc

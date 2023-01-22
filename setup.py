@@ -22,5 +22,5 @@ setup(
     packages=["youtubeSpotifyConverter"],
     license="MIT",
     include_package_data=True,
-    install_requires=["requests", "pybase64"]
+    install_requires=["requests"]
 )

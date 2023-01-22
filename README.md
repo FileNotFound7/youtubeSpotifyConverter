@@ -25,3 +25,4 @@ links = converter.C_fromTitle("Song Title")
 ## GitHub and PyPI pages
 GitHub: https://github.com/FileNotFound7/youtubeSpotifyConverter
 PyPI: https://pypi.org/project/youtubeSpotifyConverter/
+ReadTheDocs: https://youtubespotifyconverter.readthedocs.io/en/latest/
