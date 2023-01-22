@@ -57,12 +57,15 @@ class youtubeSpotifyConverter:
         else:
             raise Exception(f"Error response after requesting token.\nResponse status code: {response.status_code}\nResponse Content: {response.content}")
 
-    def SP_search(self, keyword:str):
+    def SP_search(self, keyword:str, limit=1):
         """
         gets the first song from a spotify search and returns info about it in json form
 
         :param keyword: The string to search for.
         :type keyword: str
+
+        :param limit: The amount of tracks to return.
+        :type limit: int
 
         """
 
@@ -76,7 +79,7 @@ class youtubeSpotifyConverter:
             "q" : keyword,
             "type" : "track",
             "include_external" : "audio",
-            "limit" : 1,
+            "limit" : limit,
         }
 
         response = requests.get(url=self.SP_URL+"search/", headers=headers, params=params)
@@ -105,18 +108,21 @@ class youtubeSpotifyConverter:
 
         return(response.json())
 
-    def YT_search(self, keyword: str):
+    def YT_search(self, keyword: str, limit=1):
         """
         gets the first song from a youtube search and returns info about it in json form
 
         :param keyword: The keyword to search for.
         :type keyword: str
 
+        :param limit: The amount of tracks to return.
+        :type limit: int
+
         :return: Json data about the video found by the search
         :rtype: object
         """
 
-        response = requests.get(self.YT_URL+f"search?part=snippet&maxResults=1&q={keyword}&key={self.YT_key}")
+        response = requests.get(self.YT_URL+f"search?part=snippet&maxResults={limit}&q={keyword}&key={self.YT_key}")
         return(response.json())
 
     def YT_getVideo(self, id:str):
