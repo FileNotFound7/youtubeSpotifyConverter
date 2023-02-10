@@ -166,6 +166,19 @@ class youtubeSpotifyConverter:
 
         return(URL.replace("www", "music"))
 
+    def YT_intoRegular(self, URL:str):
+        """
+        turns a youtube music URL into a youtube URL. Note: this will not always work, and will not work on URLs to anything that isn't music
+
+        :param URL: The youtube music URL that will be changed
+        :type URL: str
+
+        :return: A youtube URL
+        :rtype: str
+        """
+
+        return(URL.replace("music", "www"))
+
     def YT_idIntoURL(self, id:str):
         """
         turns a youtube Id into a URL
@@ -205,6 +218,8 @@ class youtubeSpotifyConverter:
             id = urlparse(link).path.replace("/track", "") # find track id
             json = self.SP_get(id) # get song info
             name = json["name"] + " " + json["artists"][0]["name"] # change song info into a name for searching
+            name = name.replace(" - Topic", "")
+            name = name.replace("VEVO", "")
 
             # get tracks and fill the results dictionary
             result["spotify"] = link
@@ -225,11 +240,22 @@ class youtubeSpotifyConverter:
             json = self.YT_getVideo(id)
             name = json["items"][0]["snippet"]["title"] + " " + json["items"][0]["snippet"]["channelTitle"]
 
+            # remove "VEVO" and " - Topic" from the name. This should help improve accuracy
+            name = name.replace(" - Topic", "")
+            name = name.replace("VEVO", "")
+
             # fill the dictionary with the links and names by searching on spotify and using the given link
-            result["youtube"] = link
-            result["name"] = name
-            result["youtubeMusic"] = self.YT_intoMusic(result["youtube"])
-            result["spotify"] = self.SP_search(name)["tracks"]["items"][0]["external_urls"]["spotify"]
+
+            if link.find("music") != -1:
+                result["youtube"] = self.YT_intoRegular(link)
+                result["name"] = name
+                result["youtubeMusic"] = link
+                result["spotify"] = self.SP_search(name)["tracks"]["items"][0]["external_urls"]["spotify"]
+            else:
+                result["youtube"] = link
+                result["name"] = name
+                result["youtubeMusic"] = self.YT_intoMusic(link)
+                result["spotify"] = self.SP_search(name)["tracks"]["items"][0]["external_urls"]["spotify"]
 
         return(result)
 
@@ -249,7 +275,7 @@ class youtubeSpotifyConverter:
             "youtube" : "",
             "youtubeMusic" : "",
             "spotify" : "",
-            "name" : ""
+            "name" : name
         }
 
         result["youtube"] = self.YT_idIntoURL(self.YT_search(name)["items"][0]["id"]["videoId"])
