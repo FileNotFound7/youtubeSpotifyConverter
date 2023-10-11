@@ -1,6 +1,6 @@
 import requests
 from base64 import b64encode
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs, urlencode
 
 class youtubeSpotifyConverter:
     # the URLs used to make requests
@@ -57,7 +57,21 @@ class youtubeSpotifyConverter:
         else:
             raise Exception(f"Error response after requesting token.\nResponse status code: {response.status_code}\nResponse Content: {response.content}")
 
-    def SP_search(self, keyword:str, limit=1):
+    def SP_userauth(self, scope:str, redirect_uri:str, state):
+        
+        url = "https://accounts.spotify.com/authorize?"
+
+        headers = {'Authorization': f'Bearer {self.SP_token}'}
+        params = {"client_id": self.SP_id,
+                  "response_type": "code",
+                  "redirect_uri": redirect_uri,
+                  "state": state,
+                  "scope": scope
+                  }
+                   
+        print(url + urlencode(params))
+
+    def SP_search(self, keyword:str, limit:int=1):
         """
         gets the first song from a spotify search and returns info about it in json form
 
@@ -105,6 +119,37 @@ class youtubeSpotifyConverter:
         url=f"{self.SP_URL}tracks{id}"
 
         response = requests.get(url=url, headers=headers)
+
+        return(response.json())
+
+    def SP_createPlaylist(self, id:int, name:str, description:str="", public:bool=True):
+        """
+        creates a spotify playlist
+
+        :param name: The name of the new playlist
+        :type name: str
+        
+        :param description: The description of the new playlist
+        :type description: str
+
+        :param public: If the playlist is public or not (defaults to True)
+        :type public: bool
+        """
+        
+        headers = {
+            "Content-Type" : "application/json",
+            "Authorization" : f"Bearer {self.SP_token}"
+        }
+
+        params = {
+            "name" : name,
+            "description" : description,
+            "public" : public,
+        }
+
+        url=f"{self.SP_URL}users/{id}/playlists"
+
+        response = requests.get(url=url, headers=headers, params=params)
 
         return(response.json())
 
@@ -257,3 +302,6 @@ class youtubeSpotifyConverter:
         result["spotify"] = self.SP_search(name)["tracks"]["items"][0]["external_urls"]["spotify"]
 
         return(result)
+    
+lib = youtubeSpotifyConverter("", "8c8d06770c5a4c83855262408face857", "327af95124c749a8a604021e4da74bdb")
+lib.SP_userauth("", 'http://rgpi.duckdns.org/superbotauth', "hagershi34573dgh")
