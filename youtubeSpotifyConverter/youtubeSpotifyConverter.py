@@ -328,6 +328,3 @@ class youtubeSpotifyConverter:
         result["spotify"] = self.SP_search(name)["tracks"]["items"][0]["external_urls"]["spotify"]
 
         return(result)
-    
-lib = youtubeSpotifyConverter("", "8c8d06770c5a4c83855262408face857", "327af95124c749a8a604021e4da74bdb")
-lib.SP_userauth("", 'http://rgpi.duckdns.org/superbotauth', "hagershi34573dgh")
